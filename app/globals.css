@@ -2,32 +2,151 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.banner1{
+  background-image: url("/banner1.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation-name: fadedown;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
+.banner2{
+  background-image: url("/banner2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation-name: fadedown;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 200ms;
+}
+.banner3{
+  background-image: url("/banner3.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation-name: fadedown;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 100ms;
+}
+.banner4{
+  background-image: url("/banner4.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation-name: fadedown;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 300ms;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.overlay-bg{
+  background-color: transparent;
+    background-image: linear-gradient(180deg, #00000091 0%, #000000 100%);
+    opacity: 1;
+}
+
+.fade-down{
+  animation-name: fadedownover;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+.fade-up{
+  animation-name: fadeupover;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fadedown {
+  from{
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0%);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@keyframes fadedownover {
+  from{
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to{
+   
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@keyframes fadeupover {
+  from{
+    opacity: 1;
+    transform: translateY(0%);
   }
+  to{
+   
+    opacity: 1;
+    transform: translateY(-100%);
+  }
+}
+
+.about-creativo{
+  background-color: transparent;
+  background-image: linear-gradient(150deg, #2F2F2F 0%, #000000 100%);
+  opacity: 1;
+}
+.about-profesional{
+  background-color: transparent;
+  background-image: linear-gradient(150deg, #101010 31%, #931818 100%);
+  opacity: 1;
+}
+.about-global{
+  background-color: transparent;
+  background-image: linear-gradient(150deg, #2A2A2A 0%, #212121 100%);
+  opacity: 1;
+}
+
+.exito1{
+  background-image: url("/historiaexito1.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 2.4s;
+}
+.exito2{
+  background-image: url("/historiaexito2.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 2.4s;
+}
+.hover-web:hover {
+  background-position-y: 100%;
+  cursor: pointer;
+}
+
+.clipping{
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+
+.left-instaplanner-container{
+  background-color: transparent;
+  background-image: linear-gradient(150deg, #181818 63%, #c10018 100%);
+
+}
+.right-instragramer-container{
+  background-color: transparent;
+  background-image: linear-gradient(210deg, #181818 63%, #c10018 100%);
+
+}
+.footer-right-overlay-bg{
+  background-image: url("/logo4.png");
+  background-position: 40px center;
+  background-repeat: no-repeat;
+  background-size: 400px 400px;
+  opacity: 0.1;
 }
